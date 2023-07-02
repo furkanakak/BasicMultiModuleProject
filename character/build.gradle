@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs")
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -38,7 +39,6 @@ android {
 
 dependencies {
     implementation project(":core")
-    implementation project(path: ':detail')
     implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'

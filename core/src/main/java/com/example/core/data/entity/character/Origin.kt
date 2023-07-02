@@ -1,6 +1,7 @@
 package com.example.core.data.entity.character
 
-data class Origin (
-    val name: String,
-    val url: String
-        )
+
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+@Parcelize
+data class Origin ( val name: String, val url: String): Parcelable

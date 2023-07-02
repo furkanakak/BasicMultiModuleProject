@@ -65,8 +65,8 @@ class CharacterListFragment: Fragment()  {
     }
 
     private fun itemOnClick(result: Result) {
-        navigation.navigateToDetail(requireActivity())
-        Log.v("deeeee","item basildi")
+        navigation.navigateToDetail(binding.root,result)
+        Log.v("deeeee","itemOnClick -> result : ${result.name}")
     }
 
 }

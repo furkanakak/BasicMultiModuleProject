@@ -1,13 +1,20 @@
 package com.example.basicmultimoduleproject.impl
 
-import android.app.Activity
-import android.util.Log
-import android.widget.Toast
+
+import android.os.Bundle
+import android.view.View
+import androidx.navigation.Navigation.findNavController
+import com.example.basicmultimoduleproject.R
+
+
 import com.example.character.ui.CharacterNavigation
+import com.example.core.data.entity.character.Result
 
 class CharacterNavigationImpl : CharacterNavigation {
-    override fun navigateToDetail(activity: Activity) {
-        Log.v("deeeee","item basildi impl")
-        Toast.makeText(activity, "item basildi", Toast.LENGTH_SHORT).show()
+    override fun navigateToDetail(view: View,result: Result) {
+        val bundle = Bundle().apply {
+            putParcelable("result", result)
+        }
+       findNavController(view).navigate(R.id.action_characterListFragment_to_detailDialogFragment,bundle)
     }
 }

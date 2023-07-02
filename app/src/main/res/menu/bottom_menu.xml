@@ -12,5 +12,4 @@
         android:icon="@drawable/ic_location"
         android:title="Location"/>
 
-
 </menu>

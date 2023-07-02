@@ -14,6 +14,7 @@
             android:id="@+id/action_characterListFragment_to_detailDialogFragment"
             app:destination="@id/detailDialogFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/locationFragment"
         tools:layout="@layout/location_fragment"

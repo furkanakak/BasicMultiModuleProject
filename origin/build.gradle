@@ -71,4 +71,10 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1"
 
     implementation "androidx.fragment:fragment-ktx:1.6.0"
+
+    //test
+    testImplementation "io.mockk:mockk:1.10.6"
+    androidTestImplementation "io.mockk:mockk-android:1.10.6"
+    androidTestImplementation 'com.linkedin.dexmaker:dexmaker:2.28.1'
+    androidTestImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.2'
 }

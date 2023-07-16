@@ -23,7 +23,7 @@ class LocationViewModel @Inject constructor(private val repository: Repository) 
                 val result = repository.getOrigins()
                 _origins.value = result
             } catch (e: Exception) {
-                _origins.value = Resource.Error(e)
+                _origins.value = Resource.Error(e.message?:"Unknown error")
             }
         }
     }

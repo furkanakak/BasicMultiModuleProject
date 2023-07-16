@@ -9,9 +9,9 @@ suspend fun <T> safeApiCall(call: suspend () -> Response<T>): Resource<T> {
         if (response.isSuccessful) {
             Resource.Success(response.body()!!)
         } else {
-            Resource.Error(IOException("API call failed"))
+            Resource.Error("API call failed")
         }
     } catch (e: Exception) {
-        Resource.Error(e)
+        Resource.Error(e.message?:"")
     }
 }
